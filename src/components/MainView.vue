@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h1 class="title">Vue 2048</h1>
-    <board />
+    <Board />
     <p class="how-to-play">
       <span>HOW TO PLAY:</span> Use your <span>arrow keys </span> to move the
       tiles. Tiles with the same number <span>merge into one</span> when they
@@ -10,13 +10,8 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: {},
-  components: {
-    board: require('./Board').default,
-  },
-}
+<script setup>
+import Board from './Board'
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
